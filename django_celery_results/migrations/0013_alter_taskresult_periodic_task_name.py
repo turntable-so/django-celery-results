@@ -5,9 +5,8 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ("app", "0042_remove_scheduledworkflow_replacement_identifier"),
+        ("app", "0043_alter_scheduledworkflow_id"),
         ("django_celery_results", "0012_taskresult_date_started"),
     ]
 
