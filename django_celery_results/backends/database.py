@@ -87,7 +87,9 @@ class DatabaseBackend(BaseDictBackend):
             if task_kwargs is not None:
                 _, _, task_kwargs = self.encode_content(task_kwargs)
 
-            periodic_task_name = getattr(request, 'periodic_task_name', None)
+            periodic_task_name = getattr(request, "periodic_task_name", None)
+            if periodic_task_name is None:
+                periodic_task_name = request.properties.get("periodic_task_name")
 
             extended_props.update({
                 'periodic_task_name': periodic_task_name,

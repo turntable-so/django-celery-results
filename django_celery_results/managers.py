@@ -155,7 +155,7 @@ class TaskResultManager(ResultManager):
             'meta': meta,
             'content_encoding': content_encoding,
             'content_type': content_type,
-            'periodic_task_name': periodic_task_name,
+            'periodic_task_id': periodic_task_name,
             'task_name': task_name,
             'task_args': task_args,
             'task_kwargs': task_kwargs,
