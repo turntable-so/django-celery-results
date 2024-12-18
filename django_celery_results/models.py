@@ -29,7 +29,7 @@ class TaskResult(models.Model):
         help_text=_('Celery ID for the Task that was run'))
     periodic_task = models.ForeignKey(
         "app.ScheduledWorkflow",
-        on_delete=models.DO_NOTHING,
+        on_delete=models.CASCADE,
         null=True,
         related_name="task_results",
         to_field="id",
